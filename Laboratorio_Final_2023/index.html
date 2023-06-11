@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" type="text/css" />  
+    <script type="text/javascript" src="index.js"></script>
+    <title>Registro de usuario - Laboratorio Final Samsung Desarrolladoras (desarrollado por Verónica Yuste Baena)</title>
+</head>
+
+<body>
+    
+    <div class="form-register">
+
+        <h1>Registro de usuario</h1>
+        <br/><br/>
+        
+        <form id="formulario" method="POST" action="formulario.php">
+        
+            <label for="nombre">Nombre</label>
+            <br/>
+            <input class="controls" type="text" id="nombre" name="nombre" value="" pattern="[A-Za-z]+" maxlength="30" required onblur="compruebaNombre();" /><br/>
+		    <p id="errorNombre" style="color:#A63939;" hidden></p><br/>
+
+
+            <label for="primerapellido">Primer apellido</label>
+            <br/>
+            <input class="controls" type="text" id="primerapellido" name="primerapellido" value="" pattern="[A-Za-z]+" maxlength="30" required onblur="compruebaPrimerApellido();" /><br/>
+		    <p id="errorPrimerApellido" style="color:#A63939;" hidden></p><br/>
+
+
+            <label for="segundoapellido">Segundo apellido</label>
+            <br/>
+            <input class="controls" type="text" id="segundoapellido" name="segundoapellido" value="" pattern="[A-Za-z]+" maxlength="30" required onblur="compruebaSegundoApellido();" /><br/>
+		    <p id="errorSegundoApellido" style="color:#A63939;" hidden></p><br/>
+
+
+            <label for="email">Email</label>
+            <br/>
+            <input class="controls" type="email" id="email" name="email" value="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" maxlength="50" required onblur="compruebaEmail();" /><br/>
+            <p id="errorEmail" style="color:#A63939;" hidden></p><br/>
+
+
+            <label for="usuario">Usuario</label>
+            <br/>
+            <input class="controls" type="text" id="usuario" name="usuario" value="" pattern="[A-Za-z0-9]+" maxlength="30" required onblur="compruebaUsuario();" /><br/>
+		    <p id="errorUsuario" style="color:#A63939;" hidden></p><br/>
+
+
+            <label for="contraseña">Contraseña</label>
+            <br/>
+            <input class="controls" type="password" id="contraseña" name="contraseña" value="" minlength="4" maxlength="8" required onblur="compruebaContraseña();" /><br/>
+            <p id="errorContraseña" style="color:#A63939;" hidden></p><br/>
+
+
+            <br/>
+            <input class="botons" type="submit" value="ENVIAR" onclick="enviar();" />
+            
+        </form>
+        
+            <br/>
+            <button id="botonListado" class="botons" onclick="consultaUsuariosBD();" hidden>CONSULTA USUARIOS</button>
+            <div id="listadoUsuarios"></div><br/>
+            <button id="botonReset" class="botons" onclick="reseteo();">LIMPIAR FORMULARIO</button>
+        
+    </div>
+</body>
+</html>

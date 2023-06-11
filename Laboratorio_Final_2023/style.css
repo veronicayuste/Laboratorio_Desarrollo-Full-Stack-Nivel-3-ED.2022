@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}  
+
+.form-register {
+    width: 600px;
+    background:  #1B0C16;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 10px;
+    border: 1px solid #352127;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #B4B8B5;
+}
+
+.h1 {
+    font-size: 30px;
+}
+
+.controls {
+    width: 100%;
+    background: white;
+    padding: 10px;
+    background-image: none;
+  	background-repeat: no-repeat;
+  	background-position: 95%;
+}
+
+.botons {
+    width: 100%;
+    background:  #48233D;
+    border-radius: 3px;
+    border: 2px solid #352127;
+    padding: 12px;
+    color: white;
+    margin: 16px, 0;
+    font-size: 12px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #48233D;
+    font-weight: bold;
+}
